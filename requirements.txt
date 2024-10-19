@@ -1,0 +1,29 @@
+features for tasty bites
+1.home
+2.contact us
+3.about us
+4.search bar
+5.reviews/suggestions
+6.recipe details(ingredients and steps)
+7.embedded map
+8.Suitable colour scheme
+9.contact information
+10.contact form
+11.email link
+12.logos
+13.name entry(under contact us)
+14.email entry(under contact us)
+15.message entry(under contact us)
+16.send message (under contact us)
+17.video link
+18.filters
+19.Simple page design 
+20.instagram link
+21.facebook link
+22.twitter link
+23.footer
+24.github link
+25.cancel button in search bar
+26.Colourful and vibrant images
+27.Header
+28.Interactive
