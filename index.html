@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/RecipeLogo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Tasty Bites</title>
+</head>
+<body>
+
+    <!--- Navigation Bar -->
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="https://i.pinimg.com/280x280_RS/22/a5/76/22a5768d0b6cd908cb5b20d552d128d3.jpg" class="brand-name">
+            <a href="#" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Search Bar -->
+        <div class="title">Find a Recipe</div>
+        <div class="search-wrapper">
+            <div class="fa fa-search"></div>
+            <input type="text" name=""  id="search" placeholder="What do you want to eat?" onkeyup="search()">
+            <div class="fa fa-times" onclick="clearInput()" ></div>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+        <div class="result">
+            <h1>Your Search Result: </h1>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="card-grid" >
+            <div class="food-list" id="food-list">
+                    <p id="none" style="display: none;">Sorry, the food you were looking for was not available.</p>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://iankewks.com/wp-content/uploads/2024/01/IMG_6218-500x500.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Chicken and Rice </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get2ndRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://i.pinimg.com/736x/cc/f7/b1/ccf7b176d894168b970e6963b9c2412a.jpg">
+                        </div>
+                        <div class="card-body" >
+                            <h3>Sizzling Brownie</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get3rdRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://joyfoodsunshine.com/wp-content/uploads/2022/07/best-omelette-recipe-1.jpg">
+                        </div>
+                        <div class="card-body" >
+                            <h3>Omelette</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get4thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://hips.hearstapps.com/hmg-prod/images/chicken-burgers-index-667b185b5f528.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Chicken Burger</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get8thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>                                     
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://i0.wp.com/spainonafork.com/wp-content/uploads/2019/04/skillet1-11.png?fit=750%2C750&ssl=1">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Potato Egg Skillet</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get11thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+            </div> 
+
+            <!--Ending of Main Content-->
+
+            <!--Recipe Details-->
+            <div class = "meal-detail" id="meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+            </div>
+            <div class = "second-meal-detail" id="second-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Chicken and Rice</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Chicken rice, a popular street side special where the fried chicken, eggs and veggies are tossed in rice and spices.</p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>250 grams of boneless chicken thighs
+                            <br>2 tablespoons garlic minced or crushed
+                            <br>5 dried bay leaves
+                            <br>4 tablespoons vinegar
+                            <br>1/2 cup soy sauce
+                            <br>1 tablespoon peppercorn
+                            <br>2 cups water
+                            <br>Salt to taste
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. Combine the chicken, soy sauce, and garlic then marinade for at least 1 hour
+                            <br>2. Heat the pot and put-in the marinated pork belly then cook for a few minutes
+                            <br>3. Pour remaining marinade including garlic.
+                            <br>4. Add water, whole pepper corn, and dried bay leaves then bring to a boil. Simmer for 40 minutes to 1 hour
+                            <br>5. Put-in the vinegar and simmer for 12 to 15 minutes
+                            <br>6. Add salt to taste
+                            <br>7. Serve hot. Share and enjoy!
+                            </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "https://iankewks.com/wp-content/uploads/2024/01/IMG_6218-500x500.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=Ld8z42hm2kM&t=2s" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "third-meal-detail" id="third-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Sizzling Brownie</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Sizzling brownie with ice-cream is a total winner. Heavenly combo of decadent chocolate brownie and yummy vanilla ice-cream, this is definitely the dessert of your dreams. 
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>Dark chocolate
+                            <br>Condensed milk
+                            <br>Cocoa powder
+                            <br>Baking powder
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. Melt butter and chocolate over a double boiler or in a microwave.<br>
+                            2. Sift dry ingredients in a separate bowl and set aside.<br>
+                            3. Add the milkmaid to the melted chocolate mixture.<br>
+                            4. Fold in the dry ingredients and make a smooth brownie batter.<br>
+                            5. Pour the prepared batter into a 4 inch square pan lined with parchment paper.<br>
+                            6. Bake at 170 degree Celsius for 30 mins.<br>
+                            7. For the Chocolate Fudge Sauce - to a bowl add in the chopped chocolate, along with the cocoa powder & a pinch of salt.<br>
+                            8. Heat water along with sugar in a saucepan until it dissolves & pour over the chocolate - cover the bowl & let it rest for 5 minutes.<br>
+                            9. Add in cube of butter & whisk the chocolate mixture until smooth & lump-free - keep aside for later.<br>
+                            10.  To Assemble the Sizzling Brownie - heat the sizzler plate until its smoking hot.<br>
+                            11. Place a piece of brownie on the plate, top it up with a scoop of vanilla ice cream & pour over the silky smooth chocolate fudge sauce.<br>
+                            12. Serve, Garnish with chocolate chips or nuts of your choice & Enjoy.
+                            </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "https://i.pinimg.com/736x/cc/f7/b1/ccf7b176d894168b970e6963b9c2412a.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=ngDqanR_1iUx" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "four-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Omelette</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">In cuisine, an omelette is a dish made from beaten eggs, fried with butter or oil in a frying pan. It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat, cheese, onions or some combination of the above. 
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>3 eggs, beaten
+                            <br>1 tsp sunflower oil
+                            <br>1 tsp butter
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. Beat the eggs: Use two or three eggs per omelette, depending on how hungry you are. Beat the eggs lightly with a fork.
+                            2. Melt the butter: Use an 8-inch nonstick skillet for a 2-egg omelette, a 9-inch skillet for 3 eggs. Melt the butter over medium-low heat, and keep the temperature low and slow when cooking the eggs so the bottom doesn’t get too brown or overcooked.
+                            3. Add the eggs: Let the eggs sit for a minute, then use a heatproof silicone spatula to gently lift the cooked eggs from the edges of the pan. Tilt the pan to allow the uncooked eggs to flow to the edge of the pan.
+                            4. Fill the omelette: Add the filling—but don’t overstuff the omelette—when the eggs begin to set. Cook for a few more seconds
+                            5. Fold and serve: Fold the omelette in half. Slide it onto a plate with the help of a silicone spatula.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "https://joyfoodsunshine.com/wp-content/uploads/2022/07/best-omelette-recipe-1.jpg" alt = "helo">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.olivetomato.com/wp-content/uploads/2016/02/SAM4952-1.jpg" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "five-meal-detail" id="five-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+            </div> 
+            <div class = "six-meal-detail" id="six-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+            </div> 
+            <div class = "seven-meal-detail" id="seven-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+            </div> 
+            <div class = "eight-meal-detail" id="eight-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Chicken Burger</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Prepare the buns! For the ideal stuffing for juicy burgers, coat or marinate chicken thighs and breast. Dig it after adding toppings like slaw and sauce along with your selected side dishes.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>3 boneless chicken breasts (around half a kg)
+                            <br>1 tspn of pepper
+                            <br>1 tspn of salt
+                            <br>2 tblspns of worcestershire sauce
+                            <br>1 tspn of Mustard powder or all spice powder
+                            <br>2 tblspns of Flour
+                            <br>1 Egg
+                            <br>1 1/2 cups of Breadcrumbs
+                            <br>Soft seeded burger buns
+                            <br>Mayonnaise or KFC Zinger Sauce
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. If your chicken breasts are too big, slice them before cooking. Then, marinade the chicken breasts in the Worcestershire sauce, pepper, salt, mustard, or all-spice powder. Leave the chicken for at least four hours or over night.
+                            <br>2. An egg and two tablespoons of water should be beaten together to make the batter, which should then be set aside.
+                            <br>3. Chicken breasts that have been marinated should be heavily dusted in flour. They should be well coated after being dipped in both the egg and the breadcrumbs.
+                            <br>4. The coated chicken breasts should be deep-fried in heated oil over a medium-high heat until they are crisp and golden brown.
+                            <br>5. The finished burger should be stacked with the lettuce on top, followed by the chicken, and then the mayonnaise or KFC zinger sauce. The buns should be cut in half and lightly toasted. If you'd like a cheesy kick, add some sliced American cheese.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "https://hips.hearstapps.com/hmg-prod/images/chicken-burgers-index-667b185b5f528.jpg?crop=0.500xw:1.00xh;0.282xw,0&resize=1200:*" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=dkq8lju0HIQ" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "nine-meal-detail" id="nine-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+            </div> 
+            <div class = "ten-meal-detail" id="ten-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+            </div> 
+            <div class = "eleven-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Potato Egg Skillet</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">In cuisine, an omelette is a dish made from beaten eggs, fried with butter or oil in a frying pan. It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat, cheese, onions or some combination of the above. 
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>8 strips raw bacon
+                            <br>1 lbs Yukon gold potatoes, diced into bite sized pieces
+                            <br>1 small yellow onion, diced
+                            <br>½ red bell pepper, diced
+                            <br>½ green bell pepper, diced
+                            <br>3 cloves garlic, minced
+                            <br>1 teaspoon cumin
+                            <br>¼ teaspoon chili powder
+                            <br>¼ teaspoon paprika
+                            <br>½ teaspoon black pepper
+                            <br>½ teaspoon coarse salt
+                            <br>4 eggs
+                            <br>¼ cup mozzarella cheese, grated
+                            <br>¼ cup cheddar cheese, grated
+                            <br>Extra virgin olive oil for extra drizzling
+                            <br>Fresh cilantro roughly chopped, thinly sliced chives for garnish
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. Preheat oven to 400˚F. Place strips of bacon in a large (at least 10 inch), oven safe skillet. Cook over medium low heat on both sides until cooked through but not yet crispy, about 10 minutes. Remove from heat to a paper towel lined plate and set aside, leaving the bacon grease in the pan. When the bacon is cool enough to handle, roughly dice.
+                            <br>Increase the heat to medium high, add the potatoes, bell pepper, and onion and cook for 7- 8 minutes, stirring frequently, until starting to soften and can be pierced with a fork
+                            <br>Add garlic, cumin, chili powder, paprika, black pepper, and salt. Cook for 1-2 minutes, until garlic is fragrant.
+                            <br>Using a spoon, create 4 to 6 holes (depending on how many eggs you want) in the hash mixture for the eggs. Distribute the cheeses evenly into each hole, and then crack one egg into each hole.
+                            <br>Place in the preheat oven and cook for 8-10 minutes, until egg white is set but the yolk is still runny.
+                            <br>Remove from heat. Sprinkle with cooked bacon. Garnish with fresh ground black pepper, cilantro and chives.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "https://i0.wp.com/spainonafork.com/wp-content/uploads/2019/04/skillet1-11.png?fit=750%2C750&ssl=1" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=H6ZUevg-w6c" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            
+            
+        </div>
+            <!--Ending of Recipe Details-->
+
+            <!--Footer-->
+    <div class="footer">
+        <div class="social-btn">
+            <a href="https://www.facebook.com" target="_blank" ><i class="	fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" ><i class="	fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="	fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" "><i class="	fab fa-github"></i></a>
+        </div>
+            <div class="quick-bar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        <p>Copyright &copy. All right reserved</p>  
+    </div>
+
+    <!--Ending of Footer-->
+
+<!--Script for Javascript-->
+<script src="index.js"></script>
+</body>
+</html>
